@@ -1,6 +1,6 @@
 package imobiliare;
 
-public class Pair<T, T1> implements Comparable<Pair>{
+public class Pair<T, T1> {
     String s;
     Integer i;
     public Pair(T s, T1 i) {
@@ -8,9 +8,20 @@ public class Pair<T, T1> implements Comparable<Pair>{
         this.i = (Integer) i;
     }
 
-    @Override
-    public int compareTo(Pair o) {
-        return Integer.compare(o.i, this.i);
+    public String getS() {
+        return s;
+    }
+
+    public Integer getI() {
+        return i;
+    }
+
+    public void setS(String s) {
+        this.s = s;
+    }
+
+    public void setI(Integer i) {
+        this.i = i;
     }
 
 }

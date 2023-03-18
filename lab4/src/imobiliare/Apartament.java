@@ -146,6 +146,8 @@ public class Apartament implements Comparable<Apartament> {
 
     @Override
     public int compareTo(Apartament o) {
+        if (Double.compare(this.nrCamere, o.nrCamere) == 0)
+            return Long.compare(this.id, o.id);
         return Double.compare(this.nrCamere, o.nrCamere);
     }
 
