@@ -2,7 +2,7 @@ package imobiliare;
 
 import java.util.List;
 
-public class Apartament implements Comparable<Apartament> {
+public abstract class Apartament implements Comparable<Apartament> {
     private Long id;
 
     private Double pret;
@@ -22,7 +22,7 @@ public class Apartament implements Comparable<Apartament> {
     private List<Camera> camere;
 
 
-    public Apartament(Long id, Double pret, Double dimensiune, String dataCump, List<String> utilitati, Boolean balcon, Integer nrCamere,
+    protected Apartament(Long id, Double pret, Double dimensiune, String dataCump, List<String> utilitati, Boolean balcon, Integer nrCamere,
                       Boolean vandut, List<Camera> camere) {
         this.id = id;
         this.pret = pret;
@@ -36,7 +36,7 @@ public class Apartament implements Comparable<Apartament> {
     }
 
 
-    public Apartament(Long id, Double pret, Double dimensiune, String dataCump, List<String> utilitati, Boolean balcon, Boolean vandut, List<Camera> camere) {
+    protected Apartament(Long id, Double pret, Double dimensiune, String dataCump, List<String> utilitati, Boolean balcon, Boolean vandut, List<Camera> camere) {
         this.id = id;
         this.pret = pret;
         this.dimensiune = dimensiune;
@@ -48,7 +48,7 @@ public class Apartament implements Comparable<Apartament> {
     }
 
 
-    public Apartament(Long id, Double dimensiune, String dataCump, Boolean vandut, List<Camera> camere) {
+    protected Apartament(Long id, Double dimensiune, String dataCump, Boolean vandut, List<Camera> camere) {
         this.id = id;
         this.dimensiune = dimensiune;
         this.dataCump = dataCump;
@@ -57,12 +57,12 @@ public class Apartament implements Comparable<Apartament> {
     }
 
 
-    public Apartament() {
+    protected Apartament() {
 
     }
 
 
-    public Apartament(int nrCamere) {
+    protected Apartament(int nrCamere) {
         this.nrCamere = nrCamere;
     }
 
